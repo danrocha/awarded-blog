@@ -9,7 +9,7 @@
         <span class="font-semibold" v-for="(author, index) in book.authors" :key="author.id"
           >{{author.name}}<span v-if="index < book.authors.length -1">,&nbsp;</span></span>
       </p>
-      <book-links-shopping :isbn="book.isbn10 || book.isbn13"/>
+      <ClientOnly><book-links-shopping :isbn="book.isbn10 || book.isbn13"/></ClientOnly>
     </section>
   </article>
 </template>
