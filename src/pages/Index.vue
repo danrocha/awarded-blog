@@ -1,13 +1,18 @@
 <template>
   <Layout>
     <!-- List posts -->
-    <div class="post-list">
-      <post-card
-        v-for="edge in $page.posts.edges"
-        :key="edge.node.id"
-        :post="edge.node"
-      />
-    </div>
+
+      <div class="post-list">
+      <aside class="text-sm mb-8 sm:w-1/2 md:w-2/3 lg:w-1/2">
+        <intro-menu/>
+      </aside>
+        <post-card
+          v-for="edge in $page.posts.edges"
+          :key="edge.node.id"
+          :post="edge.node"
+        />
+      </div>
+
   </Layout>
 </template>
 
@@ -36,16 +41,19 @@
       }
     }
   }
+
 }
 </page-query>
 
 <script>
 import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
+import IntroMenu from "~/components/IntroMenu.vue";
 export default {
   components: {
     Author,
-    PostCard
+    IntroMenu,
+    PostCard,
   },
   metaInfo: {
     title: "Hello, world!"

@@ -1,8 +1,13 @@
 <template>
   <Layout>
-    <h1  class="leading-none mb-8 uppercase"># {{ $page.tag.title }}</h1>
+    <h2  class="leading-none mb-8 uppercase"><span class="text-faded">TAG&nbsp;</span># {{ $page.tag.title }}</h2>
 
-    <div  class="lg:flex lg:justify-end lg:flex-wrap">
+    <div  class="post-list">
+      <aside class="text-sm mb-8 sm:w-1/2 md:w-2/3 lg:w-1/2">
+
+        <intro-menu :current-tag="$page.tag.id"/>
+
+      </aside>
       <PostCard
         v-for="edge in $page.tag.belongsTo.edges"
         :key="edge.node.id"
@@ -15,6 +20,7 @@
 <page-query>
 query Tag ($id: ID!) {
   tag (id: $id) {
+    id
     title
     belongsTo {
       edges {
@@ -38,9 +44,11 @@ query Tag ($id: ID!) {
 <script>
 import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
+import IntroMenu from "~/components/IntroMenu.vue";
 export default {
   components: {
     Author,
+    IntroMenu,
     PostCard
   },
   metaInfo: {
@@ -48,4 +56,21 @@ export default {
   }
 };
 </script>
-<style></style>
+<style scoped>
+@screen md
+{
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+@screen xl
+{
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+</style>
