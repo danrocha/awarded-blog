@@ -1,5 +1,5 @@
 <template>
-  <a :href="amazonUrl" class="amazon-link">Buy on Amazon</a>
+  <a :href="amazonUrl" target="_blank" rel="noopener" class="amazon-link">Buy on Amazon</a>
 </template>
 
 <script>
