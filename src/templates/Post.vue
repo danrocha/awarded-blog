@@ -39,21 +39,54 @@ import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
 import Author from "~/components/Author.vue";
 export default {
+  name: 'Post',
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        { name: "description", content: this.$page.post.excerpt },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:description", content: this.$page.post.excerpt },
+        { name: "twitter:title", content: this.$page.post.title },
+        { name: "twitter:site", content: "@awardedto" },
+        { name: "twitter:image", content: this.getCoverImage() },
+        { name: "twitter:creator", content: "@awardedto" },
+        { property: "og:type", content: "article" },
+        { property: "og:title", content: this.$page.post.title },
+        { property: "og:description", content: this.$page.post.excerpt },
+        {
+          property: "og:url",
+          content: `${this.getBaseUrl()}${this.$page.post.path}`
+        },
+        {
+          property: "article:published_time",
+          content: this.$page.post.date
+        },
+        { property: "og:updated_time", content: this.$page.post.date },
+        { property: "og:image", content: this.getCoverImage() },
+        { property: "og:image:secure_url", content: this.getCoverImage() }
+      ],
+      script: [{ src: "https://platform.twitter.com/widgets.js", async: true }]
+    };
+  },
   components: {
     Author,
     PostMeta,
     PostTags
   },
-  metaInfo() {
-    return {
-      title: this.$page.post.title,
-      meta: [
-        {
-          name: "description",
-          content: this.$page.post.description
-        }
-      ]
-    };
+  methods: {
+    getCoverImage() {
+      let coverImage = "";
+      const cover = this.$page.post.cover_image;
+      if (cover) {
+        coverImage = `${this.getBaseUrl()}${this.$page.post.cover_image.src}`;
+      }
+      return coverImage;
+    },
+    getBaseUrl() {
+      return 'https://news.awarded.to'
+      //return process.env.GRIDSOME_BASE_URL;
+    }
   }
 };
 </script>
@@ -63,7 +96,8 @@ query Post ($id: ID!) {
   post(id: $id) {
     title
     path
-    date (format: "D. MMMM YYYY")
+    excerpt
+    date
     tags {
       id
       title

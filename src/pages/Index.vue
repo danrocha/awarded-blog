@@ -24,6 +24,7 @@
         id
         title
         path
+        excerpt
         tags {
           id
           title
@@ -50,14 +51,32 @@ import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
 import IntroMenu from "~/components/IntroMenu.vue";
 export default {
+  name: 'Home',
+  metaInfo: {
+    title: "Awarded News",
+    titleTemplate: null,
+    meta: [
+      { name: "author", content: "Daniel da Rocha" },
+      {
+        name: "description",
+        content: "Keep track of the most important book and movie awards and festivals."
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:description", content: "Keep track of the most important book and movie awards and festivals." },
+      { name: "twitter:title", content: "Awarded" },
+      { name: "twitter:site", content: "@awardedto" },
+      {
+        name: "twitter:image",
+        content: `https://news.awarded.to/images/awarded-banner.jpg`
+      },
+      { name: "twitter:creator", content: "@danroc" }
+    ]
+  },
   components: {
     Author,
     IntroMenu,
     PostCard,
   },
-  metaInfo: {
-    title: "Hello, world!"
-  }
 };
 </script>
 <style scoped>

@@ -16,8 +16,6 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Awarded News',
-  siteDescription:
-    'The latest news on the world of awards and festivals.',
   css: {
     loaderOptions: {
       postcss: {

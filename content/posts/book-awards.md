@@ -8,6 +8,7 @@ series: false
 cover_image: ./images/book-awards/book-awards.jpg
 canonical_url: true
 description: "Book awards are a great source to help you find your next book to read. From general book awards with several categories to niche awards showcasing award-winning books from a particular topic, the options are plenty. Here is a small list of my favorite book awards to keep track of."
+excerpt: "Book Awards can be a source of great book recommendations. Here are five prestigious book awards to keep in mind."
 ---
 
 <!-- The most prestigious book awards to help you find a great book to read 75

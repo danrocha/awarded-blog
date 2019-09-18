@@ -46,14 +46,23 @@ import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
 import IntroMenu from "~/components/IntroMenu.vue";
 export default {
+  name: 'Post',
+  metaInfo() {
+    return {
+      title: `Tag #${this.$page.tag.title}`,
+      meta: [
+        {
+          name: "description",
+          content: `Collection of posts ${this.$page.tag.title}`
+        }
+      ]
+    };
+  },
   components: {
     Author,
     IntroMenu,
     PostCard
   },
-  metaInfo: {
-    title: "Hello, world!"
-  }
 };
 </script>
 <style scoped>

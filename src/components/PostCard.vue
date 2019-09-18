@@ -14,7 +14,7 @@
       </h2>
       <post-meta :post="post" class="mb-4" />
 
-      <p v-html="post.description" class="mb-4" />
+      <p v-html="post.excerpt" class="mb-4" />
       <aside class="flex flex-wrap">
         <post-tags :post="post" />
       </aside>

@@ -24,13 +24,13 @@ export default {
     };
   },
   async mounted() {
-    console.log(this.affiliates);
+    //console.log(this.affiliates);
     try {
       const ipUrl = "http://ip-api.com/json/?fields=status,message,countryCode";
       const { data } = await axios.get(ipUrl);
       if (data.hasOwnProperty('countryCode')) {
         this.countryCode = data.countryCode.toLowerCase();
-        console.log(this.countryCode);
+        //console.log(this.countryCode);
       }
     } catch (e) {
       console.error(e);
