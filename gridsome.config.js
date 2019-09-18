@@ -45,6 +45,14 @@ module.exports = {
         }
       }
     },
+    {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM-PQHSN7B',
+        enabled: true,
+        debug: true
+      }
+    }
     // {
     //   use: '@gridsome/source-filesystem',
     //   options: {
