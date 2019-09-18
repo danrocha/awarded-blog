@@ -1,5 +1,5 @@
 <template>
-  <article class="flex border-t border-l border-gray-400 p-4 -ml-12 pb-12 -mb-8 mt-8">
+  <article class="flex border-t md:border-l border-gray-400 pt-4 md:pl-4  md:-ml-12 pb-12 -mb-8 mt-8">
     <figure class="mr-4 shadow flex-none">
       <book-cover :image-url="book.imageUrl" :isbn="book.isbn10 || book.isbn13" />
     </figure>

@@ -1,6 +1,15 @@
 <template>
   <Layout>
     <article class="pt-16">
+
+        <figure v-if="$page.post.cover_image" class="hidden xl:block">
+          <g-image
+            alt="Cover image"
+            v-if="$page.post.cover_image"
+            :src="$page.post.cover_image"
+            class="rounded-lg border border-gray-200"
+          />
+        </figure>
       <section class="w-auto ml-auto mr-auto sm:mr-32 max-w-lg">
         <header class="mb-8">
           <h1 class="leading-tight mb-4 ">
@@ -68,5 +77,12 @@ query Post ($id: ID!) {
 </page-query>
 
 <style scoped>
+@screen xl {
+  article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+  }
 
+}
 </style>

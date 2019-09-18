@@ -13,10 +13,24 @@ html {
 }
 
 h1 {
-  @apply text-4xl font-semibold;
+  @apply text-5xl font-bold;
 }
 h2 {
-  @apply text-3xl font-semibold mt-12 mb-4;
+  @apply text-4xl font-semibold mt-12 mb-4;
+}
+.content h2::before {
+    display: block;
+    content: "";
+    @apply w-32 mb-1 border-t-2 border-gray-800;
+}
+@screen md {
+  .content h2::before {
+      display: block;
+      content: "";
+      @apply -ml-12;
+
+  }
+
 }
 h3 {
   @apply text-xl font-semibold mt-8 mb-2;

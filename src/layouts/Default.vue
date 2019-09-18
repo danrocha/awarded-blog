@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-full flex flex-col items-stretch antialiased px-4">
+  <div class="min-h-full flex flex-col items-stretch antialiased sm:px-4">
     <nav
     class="mb-4 flex flex-col flex-shrink-0 sm:justify-between sm:items-center sm:flex-row sm:flex-row-reverse"
 

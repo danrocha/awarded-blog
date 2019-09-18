@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <!-- List posts -->
-    <div class="lg:flex lg:justify-end lg:flex-wrap">
+    <div class="post-list">
       <post-card
         v-for="edge in $page.posts.edges"
         :key="edge.node.id"
@@ -52,5 +52,21 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+@screen md
+{
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+@screen xl
+{
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
 </style>
