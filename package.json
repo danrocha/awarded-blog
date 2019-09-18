@@ -11,7 +11,6 @@
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.3",
     "@gridsome/vue-remark": "^0.1.1",
-    "affiliate": "^3.0.2",
     "axios": "^0.19.0",
     "gridsome": "^0.7.2"
   },
