@@ -31,8 +31,6 @@
           path
         }
         date (format: "D. MMMM YYYY")
-
-        description
         cover_image (width: 770, height: 380, blur: 10)
         ...on Post {
             id

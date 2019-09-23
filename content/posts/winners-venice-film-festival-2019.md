@@ -7,7 +7,7 @@ tags: ['movies', 'venice', 'winners']
 series: false
 cover_image: ./images/winners-venice-film-festival-2019.jpg
 canonical_url: true
-description: "Todd Phillips's Joker got the Golden Lion for best movie; Roman Polanski won the Grand Jury Prize for An Officer And A Spy. See all competition winners of 2019's Venice Film Festival."
+excerpt: "Todd Phillips's Joker got the Golden Lion for best movie; Roman Polanski won the Grand Jury Prize for An Officer And A Spy. See all competition winners of 2019's Venice Film Festival."
 ---
 
 
