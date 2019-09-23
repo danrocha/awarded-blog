@@ -34,6 +34,8 @@
   }
 </script>
 
-<style lang="scss" scoped>
-
+<style  scoped>
+li {
+  @apply mb-1;
+}
 </style>
