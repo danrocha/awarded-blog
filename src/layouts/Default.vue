@@ -13,7 +13,7 @@
         <a href="https://awarded.to/books" class="title-link font-bold">Books</a>
       </li>
       <li class="mr-4 mb-2">
-        <router-link to="/about" class="title-link">About</router-link>
+        <a href="//awarded.to/about" class="title-link">About</a>
       </li>
       <li>
         <a
