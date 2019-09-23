@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Awarded News',
+
   css: {
     loaderOptions: {
       postcss: {
@@ -69,13 +70,13 @@ module.exports = {
     //   },
     // },
   ],
-  // transformers: {
-  //   //Add markdown support to all file-system sources
-  //   remark: {
-  //     externalLinksTarget: '_blank',
-  //     externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-  //     anchorClassName: 'icon icon-link',
+  transformers: {
+    //Add markdown support to all file-system sources
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
 
-  //   },
-  // },
+    },
+  },
 };
