@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center text-faded a-uppercase-info">
     <span>
-      {{ post.date }}
+      {{ post.date | formatDate('MMMM do, yyyy') }}
     </span>
     <template v-if="post.timeToRead">
       <span><star-separator />{{ post.timeToRead }} min read</span>
