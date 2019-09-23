@@ -1,0 +1,15 @@
+{
+  "id": 2534,
+  "imdbId": "tt9584814",
+  "title": "Gloria Mundi",
+  "tmdbId": 572521,
+  "releaseDate": "2019-11-27",
+  "directors": [
+    {
+      "id": 3048,
+      "name": "Robert Guédiguian",
+      "__typename": "MoviesPerson"
+    }
+  ],
+  "asins": []
+}

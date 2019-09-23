@@ -1,0 +1,15 @@
+{
+  "id": 2536,
+  "imdbId": "tt7286456",
+  "title": "Joker",
+  "tmdbId": 475557,
+  "releaseDate": "2019-10-03",
+  "directors": [
+    {
+      "id": 3433,
+      "name": "Todd Phillips",
+      "__typename": "MoviesPerson"
+    }
+  ],
+  "asins": []
+}

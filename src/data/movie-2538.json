@@ -1,0 +1,15 @@
+{
+  "id": 2538,
+  "imdbId": "tt4516162",
+  "title": "Martin Eden",
+  "tmdbId": 582873,
+  "releaseDate": "2019-09-15",
+  "directors": [
+    {
+      "id": 4636,
+      "name": "Pietro Marcello",
+      "__typename": "MoviesPerson"
+    }
+  ],
+  "asins": []
+}

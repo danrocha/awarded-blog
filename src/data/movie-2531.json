@@ -1,0 +1,15 @@
+{
+  "id": 2531,
+  "imdbId": "tt2398149",
+  "title": "An Officer and a Spy",
+  "tmdbId": 399121,
+  "releaseDate": "2019-11-13",
+  "directors": [
+    {
+      "id": 2807,
+      "name": "Roman Polanski",
+      "__typename": "MoviesPerson"
+    }
+  ],
+  "asins": []
+}
