@@ -1,18 +1,18 @@
 <template>
   <Layout>
     <!-- List posts -->
-
-      <div class="post-list">
-      <aside class="text-sm mb-8 sm:w-1/2 md:w-2/3 lg:w-1/2">
+    <div class="home-grid">
+      <aside class="text-sm">
         <intro-menu/>
       </aside>
+      <div  class="post-list">
         <post-card
           v-for="edge in $page.posts.edges"
           :key="edge.node.id"
           :post="edge.node"
         />
       </div>
-
+    </div>
   </Layout>
 </template>
 
@@ -78,20 +78,26 @@ export default {
 };
 </script>
 <style scoped>
-@screen md
-{
-  .post-list {
+.home-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 2rem;
+}
+@screen sm {
+  .home-grid {
+    grid-template-columns: 200px 1fr;
   }
 }
-@screen xl
-{
-  .post-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
+@screen md {
+  .home-grid {
+    grid-template-columns: 300px 1fr;
   }
 }
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
 </style>

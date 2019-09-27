@@ -1,5 +1,5 @@
 <template>
-  <ul class="text-faded a-uppercase-info mb-2">
+  <ul class="text-faded a-uppercase-info mb-2 flex flex-wrap sm:flex-col">
     <li v-if="currentTag">&larr;&nbsp;<g-link to="/" class="title-link">Home</g-link></li>
     <li v-for="{node} in $static.tags.edges" :key="node.id">
       <g-link v-if="node.id !== currentTag" :to="node.path" class="title-link">
@@ -36,6 +36,6 @@
 
 <style  scoped>
 li {
-  @apply mb-1;
+  @apply mb-1 mr-2;
 }
 </style>
