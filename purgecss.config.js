@@ -1,6 +1,6 @@
 class TailwindExtractor {
   static extract(content) {
-    return content.match(/[A-z0-9-:\\/]+/g)
+    return content.match(/[A-z0-9-:\\/]+/g);
   }
 }
 
@@ -21,6 +21,19 @@ module.exports = {
     'g-image',
     'g-image--lazy',
     'g-image--loaded',
+    'button-social',
+    'icon-linkedin',
+    'icon-facebook',
+    'icon-reddit',
+    'icon-whatsapp',
+    'icon-email',
+    'icon-twitter',
+    'linkedin__design__outline',
+    'facebook__design__outline',
+    'twitter__design__outline',
+    'reddit__design__outline',
+    'whatsapp__design__outline',
+    'email__design__outline'
   ],
   extractors: [
     {
@@ -28,4 +41,4 @@ module.exports = {
       extensions: ['vue', 'js', 'jsx', 'md', 'html', 'pug'],
     },
   ],
-}
+};
