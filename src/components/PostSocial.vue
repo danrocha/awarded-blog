@@ -1,11 +1,14 @@
 <template>
 <div class="text-xs flex my-8">
+  <client-only>
+
   <component v-for="(component, index) in $options.components" :key="index" :is="component"
     :page_title="pageTitle"
     has_icon
     button_design="outline"
     >
   </component>
+  </client-only>
 </div>
 </template>
 
