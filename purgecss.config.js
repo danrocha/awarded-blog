@@ -33,7 +33,7 @@ module.exports = {
     'twitter__design__outline',
     'reddit__design__outline',
     'whatsapp__design__outline',
-    'email__design__outline'
+    'viber__design__outline'
   ],
   extractors: [
     {
