@@ -16,6 +16,7 @@
             {{ $page.post.title }}
           </h1>
           <PostMeta :post="$page.post" />
+          <post-social/>
         </header>
         <main class="content">
           <!-- <div v-html="$page.post.content" /> -->
@@ -23,6 +24,7 @@
         </main>
         <aside>
           <PostTags :post="$page.post" />
+          <post-social />
         </aside>
         <div>
           <!-- Add comment widgets here -->
@@ -37,6 +39,7 @@
 <script>
 import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
+import PostSocial from "~/components/PostSocial";
 import Author from "~/components/Author.vue";
 export default {
   name: 'Post',
@@ -44,27 +47,19 @@ export default {
     return {
       title: this.$page.post.title,
       meta: [
-        { name: "description", content: this.$page.post.excerpt },
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:description", content: this.$page.post.excerpt },
-        { name: "twitter:title", content: this.$page.post.title },
-        { name: "twitter:site", content: "@awardedto" },
-        { name: "twitter:image", content: this.getCoverImage() },
-        { name: "twitter:creator", content: "@awardedto" },
-        { property: "og:type", content: "article" },
-        { property: "og:title", content: this.$page.post.title },
-        { property: "og:description", content: this.$page.post.excerpt },
+        { key: "description", name: "description", content: this.$page.post.excerpt },
+        { key: "twitter:description", name: "twitter:description", content: this.$page.post.excerpt },
+        { key: "twitter:title",name: "twitter:title", content: this.$page.post.title },
+        { key: "twitter:image",name: "twitter:image", content: this.getCoverImage() },
+        { key: "og:type",name: "og:type", content: "article" },
+        { key: "og:title",name: "og:title", content: this.$page.post.title },
+        { key: "og:description", name: "og:description", content: this.$page.post.excerpt },
         {
-          property: "og:url",
-          content: `${this.getBaseUrl()}${this.$page.post.path}`
-        },
-        {
-          property: "article:published_time",
+          key: "article:published_time",
+          name: "article:published_time",
           content: this.$page.post.date
         },
-        { property: "og:updated_time", content: this.$page.post.date },
-        { property: "og:image", content: this.getCoverImage() },
-        { property: "og:image:secure_url", content: this.getCoverImage() }
+        { key: "og:image", name: "og:image",content: this.getCoverImage() },
       ],
       script: [{ src: "https://platform.twitter.com/widgets.js", async: true }]
     };
@@ -72,7 +67,9 @@ export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostSocial,
+    PostTags,
+
   },
   methods: {
     getCoverImage() {

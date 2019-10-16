@@ -53,22 +53,6 @@ export default {
   metaInfo: {
     title: "Awarded News",
     titleTemplate: null,
-    meta: [
-      { name: "author", content: "Daniel da Rocha" },
-      {
-        name: "description",
-        content: "Keep track of the most important book and movie awards and festivals."
-      },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:description", content: "Keep track of the most important book and movie awards and festivals." },
-      { name: "twitter:title", content: "Awarded" },
-      { name: "twitter:site", content: "@awardedto" },
-      {
-        name: "twitter:image",
-        content: `https://news.awarded.to/images/awarded-banner.jpg`
-      },
-      { name: "twitter:creator", content: "@danroc" }
-    ]
   },
   components: {
     Author,
