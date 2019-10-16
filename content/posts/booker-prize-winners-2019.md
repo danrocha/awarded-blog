@@ -7,8 +7,8 @@ tags: ['books', 'the booker prize', '2019']
 series: false
 cover_image: ./images/2019-booker-prize-winners.jpg
 canonical_url: true
-description: "Margaret Atwood and Bernardine Evaristo share the win for 2019's Booker Prize."
-excerpt: "Margaret Atwood and Bernardine Evaristo share the win for 2019's Booker Prize."
+description: "Judges break the rules with a double win by two authors in this year's announcement."
+excerpt: "Judges break the rules with a double win by two authors in this year's announcement."
 ---
 
 import BookRecommendation from '~/components/BookRecommendation.vue'
