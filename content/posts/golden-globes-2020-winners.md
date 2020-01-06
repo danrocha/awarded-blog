@@ -7,7 +7,7 @@ tags: ['movies', 'golden globes', 'winners']
 series: false
 cover_image: ./images/2020-golden-globes-winners.jpg
 canonical_url: true
-excerpt: "Netflix is the biggest disappointment of the night with the most nominations and zero wins."
+excerpt: "Netflix is the biggest disappointment of the night with the most nominations and zero wins"
 ---
 
 
